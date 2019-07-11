@@ -1,5 +1,14 @@
 Punchline Pfam domain searches
 
+Definition:
+
+punchline
+/ˈpʌn(t)ʃlʌɪn/
+noun
+
+the final phrase or sentence of a joke or story, providing the humour or some other crucial element.
+
+
 Dependencies:
 HMMER3 Ð installation instructions here: http://hmmer.org/documentation.html
 Python2.7 or Python3

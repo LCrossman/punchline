@@ -112,12 +112,14 @@ if is.finite(max(which(kruskal.wallis.table$q.value <= kruskal.wallis.alpha))) {
        if(is.null(df)){df<-tmp} else { df<-rbind(df,tmp)} 
      }
      colnames(df)<-c("Value","Type","Pfam")
+     
+     df$Type <- as.factor(df$Type)
  
      p<-ggplot(df,aes(Type,Value,colour=Type))+ylab("Pfam domain counts")
      p<-p+geom_boxplot()+geom_jitter()+theme_bw()+
        facet_wrap( ~ Pfam , scales="free", ncol=3)
      p<-p+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
-     pdf("Kruskal_wallis_tests.pdf", height=0.1*length(rownames(df)), width=15)
+     pdf("Kruskal_wallis_tests.pdf", height=0.1*length(kruskal.wallis.table[selected,]$id), width=15)
      p
      dev.off()
      }

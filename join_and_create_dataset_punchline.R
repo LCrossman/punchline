@@ -91,7 +91,7 @@ kruskal.wallis.table$q.value <- kruskal.wallis.table$p.value * kruskal.wallis.ta
 kruskal.wallis.table <- kruskal.wallis.table[complete.cases(kruskal.wallis.table),]
 
 kruskal.wallis.table
-if is.finite(max(which(kruskal.wallis.table$q.value <= kruskal.wallis.alpha))) {
+if(is.finite(max(which(kruskal.wallis.table$q.value <= kruskal.wallis.alpha)))) {
      last.significant.element <- max(which(kruskal.wallis.table$q.value <= kruskal.wallis.alpha))
      selected <- 1:last.significant.element
      diff.cat.factor <- kruskal.wallis.table$id[selected]

@@ -103,6 +103,7 @@ if(is.finite(max(which(kruskal.wallis.table$q.value <= kruskal.wallis.alpha)))) 
      write.table(dat, "dataset_signi_counts.txt", quote=FALSE, row.names=TRUE, col.names=FALSE, sep="\t")
 
      write.table(selct, "kruskal_wallis_selected.txt", quote=FALSE, row.names=TRUE, col.names=TRUE, sep="\t")
+     write.table(kruskal.wallis.table, "kruskal_wallis_fulltable.txt", quote=FALSE, row.names=TRUE, col.names=TRUE, sep="\t")
      ifelse(length(diff.cat)>120,dc <- diff.cat[1:120], dc <- diff.cat)
 
      df<-NULL
